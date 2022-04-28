@@ -2,6 +2,8 @@
 
 ## First Component
 
+Creating first react component
+
 ```
 // Creating First Component
 import React from 'react'
