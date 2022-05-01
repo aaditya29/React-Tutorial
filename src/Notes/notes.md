@@ -87,3 +87,21 @@ ReactDom.render(<Greeting />, document.getElementById('root'))
 
 This code looks confusing and complicated. Hence we don't use the arrow functions to make the compoents.<br>
 Instead we will use the method we used in the <b>First Component.</b>
+
+```JavaScript
+import React from 'react'
+import ReactDom from 'react-dom'
+
+
+function Greeting(){
+    return(
+        <div>
+            <h1>Hello World</h1>
+        </div>
+    );
+}
+
+ReactDom.render(<Greeting />, document.getElementById('root'))
+```
+
+Above way to make the divisions looks a little different and least complicated than the arrow functions.<br>
