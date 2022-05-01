@@ -50,4 +50,21 @@ const Greeting = () =>{
 ReactDom.render(<Greeting />, document.getElementById('root'))// This function sees two things, what we are going to render and where we want it to be rendered.
 ```
 
-<>
+<b>Function of React.createElement: </b>In React, you won't be using <i>document.createElement.</i><br>
+However, we saw how it works because it shares some similarities with <i>React.createElement</i> but it's not the same thing.<br>
+document.createElement returns a DOM element (for example a div or an h1). Whereas React.createElement returns an object that represents the DOM element.
+
+```
+React.createElement(type, options, children)
+```
+
+#### Syntax
+
+To write a text inside the element, you have to provide the 3rd parameter for React.createElement which is called children (so it also accepts other Elements for later on).<br>
+
+```JavaScript
+React.createElement("h1", {}, "Hello World")
+```
+
+This returns an Object representing an h1 that contains Hello World.<br>
+Notice how we're saying that we don't want to set a className or style (or other options) so we pass {} as the second parameter (you could also pass null).<br>
