@@ -68,3 +68,22 @@ React.createElement("h1", {}, "Hello World")
 
 This returns an Object representing an h1 that contains Hello World.<br>
 Notice how we're saying that we don't want to set a className or style (or other options) so we pass {} as the second parameter (you could also pass null).<br>
+
+But downside of using React.createElement is that we have to make other components as children of the node.<br>
+
+#### Example:
+
+```JavaScript
+import React from 'react'
+import ReactDom from 'react-dom'
+
+const Greeting = () =>{
+    return React.createElement('h1', {},
+        React.createElement('h1', {}, 'hello world'));
+};
+
+ReactDom.render(<Greeting />, document.getElementById('root'))
+```
+
+This code looks confusing and complicated. Hence we don't use the arrow functions to make the compoents.<br>
+Instead we will use the method we used in the <b>First Component.</b>
