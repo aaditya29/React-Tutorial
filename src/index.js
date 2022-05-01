@@ -2,6 +2,7 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 
+
 function Greeting(){//by capitalising the first letter now react knows it is an special component.
     return <h4>This is Aditya and i am here making my first component</h4>
 }// Add this functionality in index.html
