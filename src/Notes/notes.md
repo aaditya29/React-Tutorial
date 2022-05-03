@@ -149,4 +149,13 @@ Above way to make the divisions looks a little different and least complicated t
 5. Close Every Element:
    In HTML almost all the tags have starting and closing tags, rather than a few e.g. <img>, <input>, <br>.
    These few tags have no closing tags. We use it simply as the way they are defined in the example above. In React JSX every tag must be close even those which have no closing tags e.g.
+
    > <img src = “ “ alt = “ “ />
+
+6. Formatting:
+   While returning JSX we should have parenthesis so the HTML code must be wrapped inside.<br>
+   If we don’t use parenthesis compiler will gives us an error.
+
+7. Tags are elements:
+   JSX Tags map to calls to `React.createElement().`
+   Use lowercase tags `<lowercase/>` when you need a DOM elements, and Capitalized tags `<Capitalized/>` for component elements.
