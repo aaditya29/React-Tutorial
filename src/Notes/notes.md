@@ -121,6 +121,7 @@ Above way to make the divisions looks a little different and least complicated t
 1. Return Single Element:
    In react we can return a whole bunch of code or element but the HTML code must be wrapped in ONE top level element.<br>
    So if you like to write two “div”, you must put them inside a parent element, like a “div” element.
+
    ```JavaScript
     function Component(){
         return(
@@ -135,3 +136,17 @@ Above way to make the divisions looks a little different and least complicated t
         );
     }
    ```
+
+2. div/section/article or React Fragment:
+   A pair of empty <> and </> tags get’s turned into a React. Fragment element, i.e. an element that doesn’t map to DOM nodes. Fragments are useful for returning multiple cells or list items from a component.
+
+3. Use camelCase for HTML attributes:
+   In JavaScript we used to write inline attributes or event Listeners e.g. “onclick()”. But in case of React we can’t write attributes like this. “onclick” attribute of JavaScript must be capitalized e.g. camelCase.
+
+4. className Instead of Class:
+   In HTML we use class attribute for specific element. As we are using React, a JavaScript framework so we can’t use class keyword because in ES6 it is a reserve keyword to define a class. If we use class for HTML attribute it will gives an error, instead we should use className.
+
+5. Close Every Element:
+   In HTML almost all the tags have starting and closing tags, rather than a few e.g. <img>, <input>, <br>.
+   These few tags have no closing tags. We use it simply as the way they are defined in the example above. In React JSX every tag must be close even those which have no closing tags e.g.
+   > <img src = “ “ alt = “ “ />
