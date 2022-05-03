@@ -105,3 +105,15 @@ ReactDom.render(<Greeting />, document.getElementById('root'))
 ```
 
 Above way to make the divisions looks a little different and least complicated than the arrow functions.<br>
+
+## JSX Rules
+
+> #### Following are the few React JSX rules which must be followed while using React
+>
+> - Return Single Element
+> - div/section/article or React Fragment.
+> - Use camelCase for HTML Attribute.
+> - className instead of Class.
+> - Close every element.
+> - Formatting.
+> - Tags are elements.
