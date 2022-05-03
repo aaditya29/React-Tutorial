@@ -152,10 +152,10 @@ Above way to make the divisions looks a little different and least complicated t
 
    > <img src = “ “ alt = “ “ />
 
-6. Formatting:
+6. Formatting:<br>
    While returning JSX we should have parenthesis so the HTML code must be wrapped inside.<br>
    If we don’t use parenthesis compiler will gives us an error.
 
-7. Tags are elements:
-   JSX Tags map to calls to `React.createElement().`
+7. Tags are elements:<br>
+   JSX Tags map to calls to `React.createElement().`<br>
    Use lowercase tags `<lowercase/>` when you need a DOM elements, and Capitalized tags `<Capitalized/>` for component elements.
