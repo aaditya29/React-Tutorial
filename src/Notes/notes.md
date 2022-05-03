@@ -121,3 +121,17 @@ Above way to make the divisions looks a little different and least complicated t
 1. Return Single Element:
    In react we can return a whole bunch of code or element but the HTML code must be wrapped in ONE top level element.<br>
    So if you like to write two “div”, you must put them inside a parent element, like a “div” element.
+   ```JavaScript
+    function Component(){
+        return(
+            <div>
+                <h1>Hello World</h1>
+                    <ul>
+                        <li>
+                            <a href= "#">Hello World</a>
+                        </li>
+                    </ul>
+            </div>
+        );
+    }
+   ```
