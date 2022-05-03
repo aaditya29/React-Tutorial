@@ -117,3 +117,6 @@ Above way to make the divisions looks a little different and least complicated t
 > - Close every element.
 > - Formatting.
 > - Tags are elements.
+
+1. Return Single Element:
+   In react we can return a whole bunch of code or element but the ==HTML code must be wrapped in ONE top level element==. So if you like to write two “div”, you must put them inside a parent element, like a “div” element.
