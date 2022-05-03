@@ -119,6 +119,5 @@ Above way to make the divisions looks a little different and least complicated t
 > - Tags are elements.
 
 1. Return Single Element:
-   In react we can return a whole bunch of code or element but the <mark>HTML code must be wrapped in ONE top level element</mark>.<br>
+   In react we can return a whole bunch of code or element but the HTML code must be wrapped in ONE top level element.<br>
    So if you like to write two “div”, you must put them inside a parent element, like a “div” element.
-   I need to highlight these <mark>very important words</mark>.
