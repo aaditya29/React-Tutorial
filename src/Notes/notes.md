@@ -193,9 +193,15 @@ import ReactDom from 'react-dom'
 function Greeting(){
     return(
         <div>
-            <h1>Hello World</h1>
+            <Person />
+            <Message />
         </div>
     );
+}
+
+const Person = () => <h2>John Doe</h2>//Returning implicitly
+const Message = () => {
+    return <p>This is John Doe</p>//Returning explicitly
 }
 
 ReactDom.render(<Greeting />, document.getElementById('root'))
