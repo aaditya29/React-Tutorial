@@ -160,6 +160,25 @@ Above way to make the divisions looks a little different and least complicated t
    JSX Tags map to calls to `React.createElement().`<br>
    Use lowercase tags `<lowercase/>` when you need a DOM elements, and Capitalized tags `<Capitalized/>` for component elements.
 
-## Nested Components And Tools
+## React Nested Components
 
 In React, we can nest components inside within one another. This helps in creating more complex **_User Interfaces_**. The components that are nested inside parent components are called child components. Import and Export keywords facilitate nesting of the components.<br>
+
+<b>We are returning following code first implicitly then explicitly through nested components</b>
+
+```JavaScript
+import React from 'react'
+import ReactDom from 'react-dom'
+
+
+function Greeting(){
+    return(
+        <div>
+            <h2>Hello World</h2>
+            <p> This is my message</p>
+        </div>
+    );
+}
+
+ReactDom.render(<Greeting />, document.getElementById('root'))
+```
