@@ -32,6 +32,12 @@ body {
     padding: 1rem 2rem;
 }
 
-.book h1 {
+.book h2 {
     margin-top: 0.5rem;
+}
+
+.book h4 {
+    color: #617d98;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
 }
