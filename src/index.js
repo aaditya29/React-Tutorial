@@ -12,12 +12,14 @@ function BookList(){
     )
 }
 
+const author = 'Amelia Hepworth'
 const Book = ()=> {
+    const title = 'I Love You To The Moon And Back'
     return (
     <article className="book">
         <img src="https://m.media-amazon.com/images/I/8144Vic9C5L._AC_UY436_FMwebp_QL65_.jpg" alt="" />
-        <h2>I Love You to the Moon and Back`</h2>
-        <h4>Amelia Hepworth</h4>
+        <h2>{title}</h2>
+        <h4>{author.toUpperCase()}</h4>
     </article>
     )
 }
