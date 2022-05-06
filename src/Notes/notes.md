@@ -217,7 +217,7 @@ import ReactDom from 'react-dom'
 function BookList(){
     return(
         <section>
-            <Book />
+            <Book />//To render book component
         </section>
     )
 }
@@ -225,17 +225,17 @@ function BookList(){
 const Book = ()=> {
     return (
     <article>
-        <Image></Image>
-        <Title />
-        <Author />
+        <Image></Image>//To render image component
+        <Title />// To render title component
+        <Author />// To render author component
     </article>
     )
 }
 
-const Image = () => <img src="https://images-na.ssl-images-amazon.com/images/I/51PH05QauDL._SX326_BO1,204,203,200_.jpg" alt="" />
+const Image = () => <img src="https://images-na.ssl-images-amazon.com/images/I/51PH05QauDL._SX326_BO1,204,203,200_.jpg" alt="" />//returns image
 
-const Title = () => <h2>The Song Of Achilles</h2>
-const Author = () => <h4>Madeline Miller</h4>
+const Title = () => <h2>The Song Of Achilles</h2>//returns bookname
+const Author = () => <h4>Madeline Miller</h4>// returns author name
 
 ReactDom.render(<BookList />, document.getElementById('root'))
 ```
