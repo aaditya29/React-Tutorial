@@ -3,18 +3,27 @@ import React from 'react'
 import ReactDom from 'react-dom'
 
 
-function BookList(){//by capitalising the first letter now react knows it is an special component.
+function BookList(){
     return(
-        <div>
-            <Person />
-            <Message />
-        </div>
-    );
-}// Add this functionality in index.html
-
-const Person = () => <h2>John Doe</h2>//Returning implicitly
-const Message = () => {
-    return <p>This is John Doe</p>//Returning explicitly
+        <section>
+            <Book />
+        </section>
+    )
 }
 
-ReactDom.render(<Greeting />, document.getElementById('root'))// This function sees two things, what we are going to render and where we want it to be rendered.
+const Book = ()=> {
+    return (
+    <article>
+        <Image></Image>
+        <Title />
+        <Author />
+    </article>
+    )
+}
+
+const Image = () => <img src="https://images-na.ssl-images-amazon.com/images/I/51PH05QauDL._SX326_BO1,204,203,200_.jpg" alt="" />
+
+const Title = () => <h2>The Song Of Achilles</h2>
+const Author = () => <h4>Madeline Miller</h4>
+
+ReactDom.render(<BookList />, document.getElementById('root'))
