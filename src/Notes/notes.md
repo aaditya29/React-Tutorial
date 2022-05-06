@@ -206,3 +206,5 @@ const Message = () => {
 
 ReactDom.render(<Greeting />, document.getElementById('root'))
 ```
+
+## First Project: Mini Book

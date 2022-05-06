@@ -3,7 +3,7 @@ import React from 'react'
 import ReactDom from 'react-dom'
 
 
-function Greeting(){//by capitalising the first letter now react knows it is an special component.
+function BookList(){//by capitalising the first letter now react knows it is an special component.
     return(
         <div>
             <Person />
