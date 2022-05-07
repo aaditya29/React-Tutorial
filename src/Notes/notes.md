@@ -239,3 +239,5 @@ const Author = () => <h4>Madeline Miller</h4>// returns author name
 
 ReactDom.render(<BookList />, document.getElementById('root'))
 ```
+
+## Props in React
