@@ -10,7 +10,12 @@ const firstBook={
     title: 'I Love You To The Moon And Back',
     author: 'Amelia Hepworth'
 }
+const secondBook={
+    img: 'https://m.media-amazon.com/images/I/81GRU7xd2iL._AC_UY436_QL65_.jpg',
+    title: 'Mural',
+    author: 'Mahmoud Darwish'
 
+}
 
 function BookList(){
     return(
@@ -20,7 +25,11 @@ function BookList(){
                 title = {firstBook.title}
                 author = {firstBook.author}
             />
-            <Book />
+            <Book 
+                img = {secondBook.img}
+                title = {secondBook.title}
+                author = {secondBook.author}
+            />
         </section>
     )
 }
