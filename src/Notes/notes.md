@@ -299,3 +299,23 @@ ReactDom.render(<BookList />, document.getElementById('root'))
 ## Props/Object Destructuring
 
 Suppose you have a `person` object with two properties: `firstName` and `lastName.`
+
+```JavaScript
+let person = {
+    firstName: 'John',
+    lastName: 'Doe'
+};
+```
+
+Earlier when you want to assign properties of the person object to variables, you typically do it like this:
+
+```JavaScript
+let firstName = person.firstName;
+let lastName = person.lastName;
+```
+
+ES6 introduced the object destructuring syntax that provides an alternative way to assign properties of an object to variables:
+
+```JavaScript
+let { firstName: fname, lastName: lname } = person;
+```
