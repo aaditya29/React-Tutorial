@@ -44,6 +44,4 @@ const Book = (props)=> {
     )
 }
 
-const abc;
-
 ReactDom.render(<BookList />, document.getElementById('root'))
