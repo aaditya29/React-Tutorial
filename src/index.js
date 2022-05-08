@@ -5,25 +5,32 @@ import ReactDom from 'react-dom'
 import './index.css'
 
 //setting up variables
-const author = 'Amelia Hepworth'
-const title = 'I Love You To The Moon And Back'
-const img = 'https://m.media-amazon.com/images/I/8144Vic9C5L._AC_UY436_FMwebp_QL65_.jpg'
+const firstBook={
+    img: 'https://m.media-amazon.com/images/I/8144Vic9C5L._AC_UY436_FMwebp_QL65_.jpg',
+    title: 'I Love You To The Moon And Back',
+    author: 'Amelia Hepworth'
+}
 
 
 function BookList(){
     return(
         <section className="booklist">
+            <Book 
+                img = {firstBook.img}
+                title = {firstBook.title}
+                author = {firstBook.author}
+            />
             <Book />
         </section>
     )
 }
 
-const Book = ()=> {
+const Book = (props)=> {
     return (
     <article className="book">
-        <img src={img} alt="" />
-        <h2>{title}</h2>
-        <h4>{author.toUpperCase()}</h4>
+        <img src={props.img} alt="" />
+        <h2>{props.title}</h2>
+        <h4>{props.author}</h4>
     </article>
     )
 }
