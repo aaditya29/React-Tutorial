@@ -295,3 +295,7 @@ const Book = (props)=> {
 
 ReactDom.render(<BookList />, document.getElementById('root'))
 ```
+
+## Props/Object Destructuring
+
+Suppose you have a `person` object with two properties: `firstName` and `lastName.`
