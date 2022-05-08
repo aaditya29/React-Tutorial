@@ -319,3 +319,11 @@ ES6 introduced the object destructuring syntax that provides an alternative way 
 ```JavaScript
 let { firstName: fname, lastName: lname } = person;
 ```
+
+In this example, the `firstName` and `lastName` properties are assigned to the `fName` and `lName` variables respectively.
+
+#### Syntax
+
+```
+let { property1: variable1, property2: variable2 } = object;
+```
