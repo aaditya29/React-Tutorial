@@ -334,5 +334,7 @@ Essentially, `props.children` is a special prop, automatically passed to every c
 
 #### Identifying Components By JSX Syntax
 
+> React.Children provides utilities for dealing with the props.children opaque data structure
+
 In React’s JSX, a component with children is always identified by an opening tag and a closing tag.Each child must be placed between these two tags.<br>
-When a component has no children, you can invoke it with either `<MyComponent></MyComponent>` or `<MyComponent/>`, but the latter syntax is generally preferred. The purpose of self-closing tags is to make code shorter and easier to read.
+When a component has no children, you can invoke it with either `<MyComponent></MyComponent>` or `<MyComponent/>`, but the latter syntax is generally preferred. The purpose of self-closing tags is to make code shorter and easier to read.<br>
