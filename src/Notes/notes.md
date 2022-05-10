@@ -330,11 +330,35 @@ let { property1: variable1, property2: variable2 } = object;
 
 ### Props Children
 
+> React.Children provides utilities for dealing with the props.children opaque data structure.
+
 Essentially, `props.children` is a special prop, automatically passed to every component, that can be used to render the content included between the opening and closing tags when invoking a component. These kinds of components are identified by the official documentation as “boxes”.
 
 #### Identifying Components By JSX Syntax
 
-> React.Children provides utilities for dealing with the props.children opaque data structure
-
 In React’s JSX, a component with children is always identified by an opening tag and a closing tag.Each child must be placed between these two tags.<br>
 When a component has no children, you can invoke it with either `<MyComponent></MyComponent>` or `<MyComponent/>`, but the latter syntax is generally preferred. The purpose of self-closing tags is to make code shorter and easier to read.<br>
+
+##### props.children working
+
+Let’s assume that we want to create an `ImageSlider component`. Our goal is to invoke the component just like this:
+
+```JavaScript
+<ImageSlider>
+  <img src="/assets/img-1.pg" />
+  <img src="/assets/img-2.pg" />
+  <img src="/assets/img-3.pg" />
+</ImageSlider>
+```
+
+As we can see, ImageSlider is composed of several `<img ... />` which can be accessed and rendered through props.children.
+
+```JavaScript
+export default function ImageSlider(props) {
+    return (
+      <div className="img-slider">
+        {props.children}
+      </div>
+    );
+}
+```
