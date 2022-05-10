@@ -362,3 +362,5 @@ export default function ImageSlider(props) {
     );
 }
 ```
+
+With `props.children` we can nest our content inside a component, just like we nest common HTML elements.
