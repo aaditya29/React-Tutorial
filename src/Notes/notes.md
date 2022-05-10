@@ -327,3 +327,12 @@ In this example, the `firstName` and `lastName` properties are assigned to the `
 ```
 let { property1: variable1, property2: variable2 } = object;
 ```
+
+### Props Children
+
+Essentially, `props.children` is a special prop, automatically passed to every component, that can be used to render the content included between the opening and closing tags when invoking a component. These kinds of components are identified by the official documentation as “boxes”.
+
+#### Identifying Components By JSX Syntax
+
+In React’s JSX, a component with children is always identified by an opening tag and a closing tag.Each child must be placed between these two tags.<br>
+When a component has no children, you can invoke it with either `<MyComponent></MyComponent>` or `<MyComponent/>`, but the latter syntax is generally preferred. The purpose of self-closing tags is to make code shorter and easier to read.
