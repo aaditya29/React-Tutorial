@@ -327,5 +327,3 @@ In this example, the `firstName` and `lastName` properties are assigned to the `
 ```
 let { property1: variable1, property2: variable2 } = object;
 ```
-
-### Props Children
