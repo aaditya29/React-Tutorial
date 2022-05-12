@@ -401,3 +401,109 @@ Keys allow React to keep track of elements. This way, if an item is updated or r
 #### Using Lists In BookList Project
 
 > - Previous Code Before Lists
+
+```JavaScript
+//importing css file
+ import './index.css'
+
+ //setting up variables
+ const firstBook={
+     img: 'https://m.media-amazon.com/images/I/8144Vic9C5L._AC_UY436_FMwebp_QL65_.jpg',
+     title: 'I Love You To The Moon And Back',
+     author: 'Amelia Hepworth'
+ }
+ const secondBook={
+     img: 'https://m.media-amazon.com/images/I/81GRU7xd2iL._AC_UY436_QL65_.jpg',
+     title: 'Mural',
+     author: 'Mahmoud Darwish'
+
+ }
+
+ function BookList(){
+     return(
+         <section className="booklist">
+             <Book
+                 img = {firstBook.img}
+                 title = {firstBook.title}
+                 author = {firstBook.author}
+             >
+                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium totam nesciunt ut aut voluptatum quam asperiores repellat aspernatur expedita eaque.</p>
+             </Book>
+             <Book
+                 img = {secondBook.img}
+                 title = {secondBook.title}
+                 author = {secondBook.author}
+             />
+         </section>
+     )
+ }
+
+ const Book = (props) => {
+     const {img, title, author, children} = props;
+     return (
+     <article className="book">
+         <img src={img} alt="" />
+         <h2>{title}</h2>
+         <h4>{author}</h4>
+         {children}
+     </article>
+     )
+ }
+```
+
+> - Using Lists so that code is concise and properties aren't repeated again and again.
+
+```JavaScript
+import React from 'react'
+import ReactDom from 'react-dom'
+
+//importing css file
+import './index.css'
+
+// First removed all the variables and entered the properties in the array
+const books = [
+    {
+    img: 'https://m.media-amazon.com/images/I/8144Vic9C5L._AC_UY436_FMwebp_QL65_.jpg',
+    title: 'I Love You To The Moon And Back',
+    author: 'Amelia Hepworth'
+    },
+
+    {
+    img: 'https://m.media-amazon.com/images/I/81GRU7xd2iL._AC_UY436_QL65_.jpg',
+    title: 'Mural',
+    author: 'Mahmoud Darwish'
+
+    },
+
+    {
+    img: 'https://m.media-amazon.com/images/I/71NxaDZFDSL._AC_UY436_QL65_.jpg',
+    title: 'Letters To Milena',
+    author: 'Franz Kafka'
+
+    },
+];
+
+function BookList(){
+    return(
+        <section className="booklist">
+            {books.map((book) =>{// map method rendering each item from Books array
+                const {img, title, author} = book;// accessing img, title, author properties from books
+                return <Book book={book}></Book>//Passing Book prop which is equal to book passed above i.e. passing book object as prop
+            })}
+        </section>
+    )
+}
+
+const Book = (props) => {
+    const {img, title, author} = props.book;//Passing book property defined above.
+    return (
+    <article className="book">
+        <img src={img} alt="" />
+        <h2>{title}</h2>
+        <h4>{author}</h4>
+    </article>
+    )
+}
+
+ReactDom.render(<BookList />, document.getElementById('root'))
+```
