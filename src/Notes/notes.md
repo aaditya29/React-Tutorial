@@ -366,3 +366,36 @@ export default function ImageSlider(props) {
 With `props.children` we can nest our content inside a component, just like we nest common HTML elements.
 
 ## React Lists
+
+Lists are continuous, vertical indexes of text or images.
+Lists are a continuous group of text or images. They are composed of items containing primary and supplemental actions, which are represented by icons and text.
+
+#### Example
+
+> Rendering all of the cars from garage
+
+```JavaScript
+function Car(props) {
+  return <li>I am a { props.brand }</li>;
+}
+
+function Garage() {
+  const cars = ['Ford', 'BMW', 'Audi'];
+  return (
+    <>
+      <h1>Who lives in my garage?</h1>
+      <ul>
+        {cars.map((car) => <Car brand={car} />)}
+      </ul>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Garage />);
+```
+
+Keys allow React to keep track of elements. This way, if an item is updated or removed, only that item will be re-rendered instead of the entire list.
+<b>Keys need to be unique to each sibling. But they can be duplicated globally.</b>
+
+#### Using Lists In BookList Project
