@@ -571,3 +571,37 @@ function NumberList(props) {
 ```
 
 > - Also Keys Must Only Be Unique Among Siblings
+
+### Spread Operator
+
+The JavaScript spread operator `(...)` allows us to quickly copy all or part of an existing array or object into another array or object.
+
+> The spread operator is often used in combination with destructuring.
+
+- Assigning the first and second items from numbers to variables and put the rest in an array:
+
+```JavaScript
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const [one, two, ...rest] = numbers;
+```
+
+> We can use the spread operator with objects too:
+
+- Combine these two objects:
+
+```JavaScript
+const myVehicle = {
+  brand: 'Ford',
+  model: 'Mustang',
+  color: 'red'
+}
+
+const updateMyVehicle = {
+  type: 'car',
+  year: 2021,
+  color: 'yellow'
+}
+
+const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
+```
