@@ -42,11 +42,22 @@ function BookList(){
 
 const Book = ({img, title, author}) => {
     //const {img, title, author} = props.book;
+
+    // using events onClick and onMouseOver
+    const clickHandler = () => {
+        alert('Hello World!')
+    }
+
+    const complexExample = (author) => {
+        console.log(author)
+    }
     return (
     <article className="book">
         <img src={img} alt="" />
-        <h2>{title}</h2>
+        <h2 onClick={() => console.log(title)} >{title}</h2>
         <h4>{author}</h4>
+        <button type="button" onClick={clickHandler}>Event Example</button>
+        <button type="button" onClick={() => complexExample(author)}>More Complex Example</button>
     </article>
     )
 }
