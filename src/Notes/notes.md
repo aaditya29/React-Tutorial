@@ -395,7 +395,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Garage />);
 ```
 
-Keys allow React to keep track of elements. This way, if an item is updated or removed, only that item will be re-rendered instead of the entire list.
+Keys allow React to keep track of elements. This way, if an item is updated or removed, only that item will be re-rendered instead of the entire list.<br>
 <b>Keys need to be unique to each sibling. But they can be duplicated globally.</b>
 
 #### Using Lists In BookList Project
+
+> - Previous Code Before Lists
