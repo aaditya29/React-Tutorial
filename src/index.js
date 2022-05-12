@@ -4,7 +4,7 @@ import ReactDom from 'react-dom'
 //importing css file
 import './index.css'
 
-const books[
+const books = [
     {
     img: 'https://m.media-amazon.com/images/I/8144Vic9C5L._AC_UY436_FMwebp_QL65_.jpg',
     title: 'I Love You To The Moon And Back',
@@ -17,18 +17,28 @@ const books[
     author: 'Mahmoud Darwish'
 
     },
+
+    {
+    img: 'https://m.media-amazon.com/images/I/71NxaDZFDSL._AC_UY436_QL65_.jpg',
+    title: 'Letters To Milena',
+    author: 'Franz Kafka'
+
+    },
 ];
 
 function BookList(){
     return(
         <section className="booklist">
-            {books}
+            {books.map((book) =>{
+                const {img, title, author} = book;
+                return <Book book={book}></Book>
+            })}
         </section>
     )
 }
 
 const Book = (props) => {
-    const {img, title, author} = props;
+    const {img, title, author} = props.book;
     return (
     <article className="book">
         <img src={img} alt="" />
