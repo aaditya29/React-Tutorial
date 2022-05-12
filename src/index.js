@@ -44,7 +44,9 @@ const Book = ({img, title, author}) => {
     //const {img, title, author} = props.book;
 
     // using events onClick and onMouseOver
-    const clickHandler = () => {
+    const clickHandler = (e) => {
+        console.log(e)
+        console.log(e.target)
         alert('Hello World!')
     }
 
@@ -52,7 +54,11 @@ const Book = ({img, title, author}) => {
         console.log(author)
     }
     return (
-    <article className="book">
+    <article className="book"
+        onMouseOver = {() => {
+            console.log(title)
+        }}
+    >
         <img src={img} alt="" />
         <h2 onClick={() => console.log(title)} >{title}</h2>
         <h4>{author}</h4>
