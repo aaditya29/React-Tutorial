@@ -536,5 +536,38 @@ const todoItems = todos.map((todo) =>
 When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
 
 ```JavaScript
-
+const todoItems = todos.map((todo, index) =>
+  // Only do this if items have no stable IDs
+  <li key={index}>
+    {todo.text}
+  </li>
+);
 ```
+
+### Extracting Components With Keys
+
+> Keys only make sense in the context of the surrounding array.
+
+For example, if you extract a `ListItem` component, you should keep the key on the `<ListItem />` elements in the array rather than on the `<li>` element in the `ListItem` itself.
+
+```JavaScript
+function ListItem(props) {
+  // Correct! There is no need to specify the key here:
+  return <li>{props.value}</li>;
+}
+
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =>
+    // Correct! Key should be specified inside the array.
+    <ListItem key={number.toString()} value={number} />
+  );
+  return (
+    <ul>
+      {listItems}
+    </ul>
+  );
+}
+```
+
+> - Also Keys Must Only Be Unique Among Siblings
