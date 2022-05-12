@@ -507,3 +507,34 @@ const Book = (props) => {
 
 ReactDom.render(<BookList />, document.getElementById('root'))
 ```
+
+## Keys And Spread Operator
+
+> Keys help React identify which items have changed, are added, or are removed.
+
+Keys should be given to the elements inside the array to give the elements a stable identity:
+
+```JavaScript
+const numbers = [1, 2, 3, 4, 5];
+const listItems = numbers.map((number) =>
+  <li key={number.toString()}>
+    {number}
+  </li>
+);
+```
+
+The best way to pick a key is to use a string that uniquely identifies a list item among its siblings. Most often you would use IDs from your data as keys:
+
+```JavaScript
+const todoItems = todos.map((todo) =>
+  <li key={todo.id}>
+    {todo.text}
+  </li>
+);
+```
+
+When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
+
+```JavaScript
+
+```
